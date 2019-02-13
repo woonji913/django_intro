@@ -19,3 +19,21 @@ def hello(request, name):
 def cube(request, num):
     number = num**3
     return render(request, 'cube.html', {'num': num, 'number': number})
+    
+def ping(request):
+    return render(request, 'ping.html')
+    
+def pong(request):
+    print(request.GET)
+    data = request.GET.get('data')
+    return render(request, 'pong.html', {'data': data})
+    
+def user_new(request):
+    # nickname, pwd
+    return render(request, 'user_new.html')
+    
+def user_create(request):
+    nickname = request.POST.get('nickname')
+    password = request.POST.get('password')
+    return render(request, 'user_create.html', {'nickname': nickname, 'password':password})
+    
