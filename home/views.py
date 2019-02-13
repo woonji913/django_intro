@@ -36,4 +36,5 @@ def user_create(request):
     nickname = request.POST.get('nickname')
     password = request.POST.get('password')
     return render(request, 'user_create.html', {'nickname': nickname, 'password':password})
-    
+
+   
