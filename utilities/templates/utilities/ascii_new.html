@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}image{% endblock %}
+{% block body %}
+    <h3>사용가능 font목록</h3>
+    {% for fon in fonts %}
+        <ul>
+            <li>{{ fon }}</li>
+        </ul>
+    {% endfor %}
+    <hr>
+    
+    <form action="/utilities/ascii_make/">
+        <p>단어입력: <input type="text" name="text"/></p>
+        <p>font입력: <input type="text" name="font"/></p>
+        <input type="submit" value="변환"/>
+    </form>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}image{% endblock %}
+{% block body %}
+    <h1>{% now "Y년 m월 d일 (D) h:i" %}</h1>
+    <h2>오늘의 날씨는 {{ weather }}</h2>
+{% endblock %}
